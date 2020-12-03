@@ -1,0 +1,84 @@
+:host {
+
+  width: 60%;
+  height: auto;
+  margin: 0;
+  display: block;
+  
+  .button11 {
+    width: 100%;
+    flex-direction: row;
+    > nb-icon.btn-icon.icon {
+      margin: 0;
+    }
+    
+    span {
+      display: inline;
+    }
+    
+    > nb-icon {
+      display: none;
+    }
+    > nb-icon {
+      color: inherit;
+    }
+  }
+    
+  .space41 {
+    height: auto;
+    min-height: 2rem;
+    flex-grow: 1;
+    flex-basis: 0;
+    & > * {
+      flex-basis: initial !important;
+    }
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .login-container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: var(--background-basic-color-1);
+    background-size: auto;
+  }
+    
+  @media (max-width: 1024px) {
+    .button11 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+  }
+    
+  @media (max-width: 768px) {
+    .button11 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+  }
+    
+  @media (max-width: 480px) {
+    .button11 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+  }
+    
+  @media (max-width: 320px) {
+    .button11 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+  }
+  
+}

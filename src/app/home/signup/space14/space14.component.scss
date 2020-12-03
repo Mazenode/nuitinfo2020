@@ -1,0 +1,19 @@
+:host {
+
+  width: 100%;
+  height: 100%;
+  display: block;
+  
+  .space14 {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding: 0;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+  
+}

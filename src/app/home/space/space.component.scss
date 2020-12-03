@@ -1,0 +1,87 @@
+:host {
+
+  height: 100%;
+  flex-grow: 1;
+  flex-basis: 0;
+  display: block;
+  
+  .heading3 {
+    font-size: 36px;
+    line-height: initial;
+    margin: 15% 10% 0 10%;
+  }
+    
+  .text {
+    font-size: 18px;
+    line-height: initial;
+    margin: 5% 10% 0 10%;
+  }
+    
+  .text1 {
+    font-size: 18px;
+    line-height: initial;
+    margin: 5% 10% 0 10%;
+  }
+    
+  .text13 {
+    font-size: 18px;
+    line-height: initial;
+    margin: 5% 10% 0 10%;
+  }
+    
+  .space5 {
+    height: 100%;
+    width: 50%;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    padding: 0;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .image3 {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    object-fit: fill;
+  }
+    
+  .space54 {
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    padding: 0;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .space4 {
+    height: 100%;
+    width: 100%;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    padding: 0;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .space-component {
+    height: 100%;
+    flex-grow: 1;
+    flex-basis: 0;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+  
+}

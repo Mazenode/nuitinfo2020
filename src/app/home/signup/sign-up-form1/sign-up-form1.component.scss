@@ -1,0 +1,61 @@
+:host {
+
+  width: 100%;
+  height: auto;
+  display: block;
+  
+  .text5 {
+    font-size: 12px;
+    line-height: initial;
+    margin: 0 0 4px 0;
+  }
+    
+  .name {
+    margin: 0 0 20px 0;
+    width: 100%;
+  }
+    
+  .text12 {
+    font-size: 12px;
+    line-height: initial;
+    margin: 0 0 4px 0;
+  }
+    
+  .email1 {
+    margin: 0 0 20px 0;
+    width: 100%;
+  }
+    
+  .text21 {
+    font-size: 12px;
+    line-height: initial;
+    margin: 0 0 4px 0;
+  }
+    
+  .password1 {
+    margin: 0 0 20px 0;
+    width: 100%;
+  }
+    
+  .link1 {
+    font-size: 15px;
+    line-height: initial;
+  }
+    
+  .sign-up-form1 {
+    height: 100%;
+    min-height: 2rem;
+    width: 100%;
+    & > * {
+      flex-basis: initial !important;
+    }
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+  
+}
