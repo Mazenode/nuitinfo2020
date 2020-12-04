@@ -12,14 +12,16 @@ import { CardComponent } from './card/card.component';
 import { SharedModule } from '../shared/shared.module';
 import { FormComponent } from './form/form.component';
 import { Card4Component } from './form/card4/card4.component';
-
+import { FormsModule, ReactiveFormsModule } from "@Angular/forms";
 
 @NgModule({
   declarations: [MainComponent, Card3Component, Card12Component, Card111Component, Card21Component, Card131Component, CardComponent, FormComponent, Card4Component],
   imports: [
     CommonModule,
     MainRoutingModule,
-    SharedModule
+    SharedModule, 
+    ReactiveFormsModule ,
+    FormsModule,
   ]
 })
 export class MainModule { }

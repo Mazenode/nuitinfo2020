@@ -1,4 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { AngularFirestore } from "@angular/fire/firestore";
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-card4',
@@ -7,6 +9,11 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Card4Component implements OnInit {
+
+	profileForm = new FormGroup({
+		firstName: new FormControl(''),
+		lastName: new FormControl(''),
+	  });
 
   text = `Envoyer un rapport`;
 
@@ -119,8 +126,30 @@ export class Card4Component implements OnInit {
   value8 = ``;
 
   text1 = `Envoyer mon rapport`;
+  myArray: any[] = [];
 
-  constructor() { }
+  form = new FormGroup({
+	newValue: new FormControl('')
+})
+
+onSubmit() {
+	this.firestore.collection('testCollection').add({
+		field: this.form.value.newValue
+	})
+	.then(res => {
+		console.log(res);
+		this.form.reset();
+	})
+	.catch(e => {
+		console.log(e);
+	})
+}
+  
+  constructor(private firestore: AngularFirestore) { 
+
+	this.firestore.collection('testCollection').add({field: this.form.value.newValue})
+	
+  }
 
   ngOnInit(): void {
   }

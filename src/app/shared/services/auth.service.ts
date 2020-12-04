@@ -2,7 +2,8 @@ import { Injectable, NgZone } from '@angular/core';
 import { User } from "../services/user";
 import { AngularFireAuth }  from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
-import { Router } from "@angular/router";
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -36,7 +37,7 @@ export class AuthService {
     return this.afAuth.signInWithEmailAndPassword(email, password)
       .then((result) => {
         this.ngZone.run(() => {
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['Main']);
         });
         this.SetUserData(result.user);
       }).catch((error) => {
@@ -107,8 +108,27 @@ export class AuthService {
   SignOut() {
     return this.afAuth.signOut().then(() => {
       localStorage.removeItem('user');
-      this.router.navigate(['sign-in']);
+      this.router.navigate(['log-in']);
     })
   }
 
 }
+
+export class AuthGuard implements CanActivate {
+  
+    constructor(
+      public authService: AuthService,
+      public router: Router
+    ){ }
+  
+    canActivate(
+      next: ActivatedRouteSnapshot,
+      state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
+      if(this.authService.isLoggedIn != true) {
+        this.router.navigate(['log-in'])
+      }
+
+      return true;
+    }
+  
+  }

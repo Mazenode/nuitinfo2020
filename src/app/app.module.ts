@@ -28,8 +28,10 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
+import { FormsModule, ReactiveFormsModule } from "@Angular/forms";
 // Auth service
 import { AuthService } from "./shared/services/auth.service";
+
 
 const mediaBreakpoints: NbMediaBreakpoint[] = [
   {
@@ -79,6 +81,8 @@ const mediaBreakpoints: NbMediaBreakpoint[] = [
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features
+    ReactiveFormsModule ,
+    FormsModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

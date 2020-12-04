@@ -3,6 +3,7 @@ import { NavigationEnd, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { filter, map, shareReplay } from 'rxjs/operators';
 import { BkLayout } from '@uibakery/kit';
+import { AuthService } from "./shared/services/auth.service";
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,7 @@ import { BkLayout } from '@uibakery/kit';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
+  
 
   defaultLayout: BkLayout = {
     paddings: {
@@ -72,8 +74,10 @@ export class AppComponent {
   	}
   ];
 
-  constructor(private router: Router) {
+  constructor(private router: Router, public authService: AuthService) {
+    
   }
+  
 
   private getPaddingCssValue(paddings): string {
     return `${paddings.paddingTop}${paddings.paddingTopUnit} ` +

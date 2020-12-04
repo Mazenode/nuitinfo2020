@@ -4,12 +4,18 @@
   </nb-card-header>
 
   <nb-card-body>
-    <app-sign-up-form></app-sign-up-form>
+    <div class="space SignUpForm sign-up-form" >
+      <label class="Text4 text4 label" ngClass="text-basic">Email</label>
+      <input  #userName required nbInput class="Email email  size-xl-medium" placeholder="" type="text" shape="rectangle" uiValueUpdate="updateUiEmail" status="basic" [ngModel]="value">
+      <label class="Text11 text11 text-transform-[object Object] label" ngClass="text-basic">Mot de passe</label>
+      <input #userPassword required nbInput class="Password password  size-xl-medium" placeholder="" type="password" shape="rectangle" uiValueUpdate="updateUiPassword" status="basic" [ngModel]="value1">
+      <a  routerLink="/register-user" class="Link link text-transform-none text-decoration-underline" ngClass="text-primary">{{ text }}</a>
+    </div>
   </nb-card-body>
 
   <nb-card-footer>
     <div class="space Space41 space41" >
-      <button nbButton class="Button11 button11  size-xl-medium iconPlacement-xl-none" appearance="filled" status="success">
+      <button nbButton class="Button11 button11  size-xl-medium iconPlacement-xl-none" appearance="filled" status="success" (click)="authService.SignIn(userName.value, userPassword.value)">
         <nb-icon class="icon btn-icon" icon="star"></nb-icon>
         <span>Se connecter</span>
       </button>

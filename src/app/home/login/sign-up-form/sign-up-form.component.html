@@ -1,5 +1,5 @@
 <div class="space SignUpForm sign-up-form" >
-  <label class="Text4 text4 label" ngClass="text-basic">Email</label>
+  <label class="Text4 text4 label" ngClass="text-basic" #userName required>Email</label>
   <input nbInput class="Email email  size-xl-medium" placeholder="" type="text" shape="rectangle" uiValueUpdate="updateUiEmail" status="basic" [ngModel]="value">
   <label class="Text11 text11 text-transform-[object Object] label" ngClass="text-basic">Mot de passe</label>
   <input nbInput class="Password password  size-xl-medium" placeholder="" type="password" shape="rectangle" uiValueUpdate="updateUiPassword" status="basic" [ngModel]="value1">

@@ -1,5 +1,4 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { AuthService } from "../../shared/services/auth.service";
 
 @Component({
   selector: 'app-login',
@@ -9,9 +8,7 @@ import { AuthService } from "../../shared/services/auth.service";
 })
 export class LoginComponent implements OnInit {
 
-  constructor(
-    public authService: AuthService
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
