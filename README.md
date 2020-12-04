@@ -1,2 +1,5 @@
 # nuitinfo2020
-On va win nous babababaoui
+A lancer avec angular, 
+```
+$ ng serve
+```
